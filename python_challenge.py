@@ -174,4 +174,33 @@ def good():
 
 # 10. Bull
 def bull():
+    a = []
+    string = '1'
+    a.append(string)
+    for count in range(35):
+        length = len(string)
+        if length == 1:
+            string = '1' + string
+            a.append(string)
+        else:
+            new_string = ""
+            repeats = 1
+            for i in range(1, len(string)):
+                if string[i] == string[i-1]:
+                    repeats += 1
+                else:
+                    new_string = new_string + str(repeats) + string[i-1]
+                    repeats = 1
+            new_string = new_string + str(repeats) + string[-1]
+            a.append(new_string)
+            string = new_string
+    return a
+
+# 11. 5808
+# Initially solved this by luck. My hover preview in Windows showed the solution.
+def image_split():
+    pass
+
+# 12. Evil
+def evil():
     pass
